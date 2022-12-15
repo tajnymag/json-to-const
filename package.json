@@ -1,0 +1,49 @@
+{
+  "name": "json-to-const",
+  "version": "1.0.0",
+  "description": "A very simple tool to generate TS files from JSON files while conserving const-ness",
+  "main": "dist/json-to-const.cjs",
+  "bin": {
+    "json-to-const": "dist/json-to-const.cjs",
+    "format": "prettier --write src"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "json",
+    "const",
+    "typescript",
+    "json-schema",
+    "schema"
+  ],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "pnpm": ">=7.10.0"
+  },
+  "packageManager": "pnpm@7.10.0",
+  "prettier": {
+    "singleQuote": true,
+    "useTabs": true,
+    "tabWidth": 4,
+    "printWidth": 120
+  },
+  "devDependencies": {
+    "@types/node": "18",
+    "@types/yargs": "^17.0.13",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "yargs": "^17.6.0"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "yargs@17.6.0": "patches/yargs@17.6.0.patch"
+    }
+  }
+}

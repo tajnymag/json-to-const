@@ -1,17 +1,17 @@
 {
   "name": "json-to-const",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A very simple tool to generate TS files from JSON files while conserving const-ness",
   "main": "dist/json-to-const.cjs",
   "bin": {
-    "json-to-const": "dist/json-to-const.cjs",
-    "format": "prettier --write src"
+    "json-to-const": "dist/json-to-const.cjs"
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "format": "prettier --write src"
   },
   "keywords": [
     "json",
